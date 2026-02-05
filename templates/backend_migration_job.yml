@@ -5,8 +5,10 @@ metadata:
   annotations:
     app.openshift.io/connects-to: |
       [{"apiVersion":"apps/v1","kind":"StatefulSet","name":"redis"}]
+    {{ if .Values.enableArgoCDHooks }}
     argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    {{ end }}
 spec:
   template:
     metadata:
