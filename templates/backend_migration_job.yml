@@ -2,6 +2,10 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: migrations
+  app.openshift.io/connects-to: |
+    [{"apiVersion":"apps/v1","kind":"StatefulSet","name":"redis"}]
+  argocd.argoproj.io/hook: PreSync
+  argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
 spec:
   template:
     metadata:
