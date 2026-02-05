@@ -2,6 +2,9 @@
 host:
 
 # Optional
+FONT_COLOR: black
+BACKGROUND_COLOR: white
+
 hostExp:
 
 backendReplicas: 2
