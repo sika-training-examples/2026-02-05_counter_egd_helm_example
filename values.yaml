@@ -3,3 +3,7 @@ host:
 
 # Optional
 hostExp:
+
+backendReplicas: 2
+frontendReplicas: 2
+frontendExpReplicas: 2
