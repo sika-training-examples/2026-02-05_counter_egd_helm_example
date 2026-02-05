@@ -2,6 +2,7 @@
 host:
 
 # Optional
+EXTRA_TEXT: ''
 FONT_COLOR: black
 BACKGROUND_COLOR: white
 
