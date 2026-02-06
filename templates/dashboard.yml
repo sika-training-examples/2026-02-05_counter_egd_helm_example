@@ -9,7 +9,7 @@ metadata:
 data:
   "{{ .Release.Namespace }}-counter-dashboard.json": |
     {
-      "title": "Counter Dashboard ({{ .Release.Namespace }}/{{ .Relase.Name }})",
+      "title": "Counter Dashboard ({{ .Release.Namespace }}/{{ .Release.Name }})",
       "rows": [
         {
           "title": "Request Rate",
