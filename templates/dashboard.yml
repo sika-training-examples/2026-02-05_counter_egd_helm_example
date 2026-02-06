@@ -19,7 +19,7 @@ data:
               "type": "graph",
               "targets": [
                 {
-                  "expr": "sum(irate(counter_requests_total[10m])) by (path)",
+                  "expr": "sum(irate(counter_requests_total{namespace=\"{{ .Release.Namespace }}\"}[10m])) by (path)",
                   "legendFormat": "req/s"
                 }
               ]
