@@ -13,3 +13,4 @@ frontendReplicas: 2
 frontendExpReplicas: 2
 
 enableArgoCDHooks: false
+enableServiceMonitor: true
