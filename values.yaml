@@ -16,3 +16,4 @@ enableArgoCDHooks: false
 enableServiceMonitor: true
 openshiftDashboardEnabled: true
 openshiftConsoleLinkEnabled: true
+grafanaDashboardEnabled: true
