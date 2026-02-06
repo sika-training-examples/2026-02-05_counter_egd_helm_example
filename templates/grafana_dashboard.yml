@@ -5,6 +5,7 @@ metadata:
   name: '{{ .Release.Namespace }}-counter-dashboard'
 spec:
   resyncPeriod: 30s
+  allowCrossNamespaceImport: true
   instanceSelector:
     matchLabels:
       dashboards: "grafana"
