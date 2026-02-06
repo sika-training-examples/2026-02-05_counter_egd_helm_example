@@ -20,7 +20,7 @@ data:
               "targets": [
                 {
                   "expr": "sum(irate(counter_requests_total{namespace=\"{{ .Release.Namespace }}\"}[10m])) by (path)",
-                  "legendFormat": "req/s"
+                  "legendFormat": "req/s per {{`{{ path }}`}}"
                 }
               ]
             }
