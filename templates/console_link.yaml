@@ -6,7 +6,7 @@ metadata:
 spec:
   applicationMenu:
     section: Counter
-  href: https://{{ .Values.Host}}
+  href: https://{{ .Values.host }}
   location: ApplicationMenu
   text: '{{ .Release.Name }}'
 {{ end }}
