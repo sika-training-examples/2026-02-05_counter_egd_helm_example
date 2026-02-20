@@ -3,9 +3,16 @@ kind: Ingress
 metadata:
   name: frontend
   annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt"
     route.openshift.io/termination: "edge"
     route.openshift.io/insecureEdgeTerminationPolicy: "Redirect"
 spec:
+  {{ if .Values.ingressTlsEnabled }}
+  tls:
+    - hosts:
+        - {{ .Values.host }}
+      secretName: {{ .Values.host }}-tls
+  {{ end }}
   ingressClassName: openshift-default
   rules:
     - host: {{ required ".Values.host is required" .Values.host }}

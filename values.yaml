@@ -12,6 +12,8 @@ backendReplicas: 2
 frontendReplicas: 2
 frontendExpReplicas: 2
 
+ingressTlsEnabled: false
+
 enableArgoCDHooks: false
 enableServiceMonitor: true
 openshiftDashboardEnabled: true
