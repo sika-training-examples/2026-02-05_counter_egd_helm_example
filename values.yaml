@@ -12,6 +12,7 @@ backendReplicas: 2
 frontendReplicas: 2
 frontendExpReplicas: 2
 
+ingressClassName: openshift-default
 ingressTlsEnabled: false
 
 enableArgoCDHooks: false
