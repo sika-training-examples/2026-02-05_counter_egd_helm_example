@@ -346,7 +346,7 @@ spec:
               },
               "direction": "backward",
               "editorMode": "code",
-              "expr": "{k8s_namespace_name=\"{{ .Release.Namespace }}\"} | json | line_format \"{{ .message }}\" | json | line_format \"{{.k8s_pod_name}} {{.method}} {{.path }}\"",
+              "expr": "{k8s_namespace_name=\"{{ .Release.Namespace }}\"} | json | line_format \"{{ "{{" }} .message {{ "}}" }}\" | json | line_format \"{{ "{{" }}.k8s_pod_name{{ "}}" }} {{ "{{" }}.method{{ "}}" }} {{ "{{" }}.path {{ "}}" }}\"",
               "queryType": "range",
               "refId": "A"
             }
