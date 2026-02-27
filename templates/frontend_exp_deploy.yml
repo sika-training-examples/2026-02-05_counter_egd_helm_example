@@ -25,7 +25,7 @@ spec:
             - slu wait-for http200 --url http://backend
       containers:
         - name: frontend-exp
-          image: ghcr.io/ondrejsika/counter-frontend-go
+          image: ghcr.io/ondrejsika/counter-frontend-go:v0.7.0
           env:
             - name: API_ORIGIN
               value: http://backend
