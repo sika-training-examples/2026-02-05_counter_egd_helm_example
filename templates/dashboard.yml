@@ -12,6 +12,38 @@ data:
       "title": "Counter Dashboard ({{ .Release.Namespace }}/{{ .Release.Name }})",
       "rows": [
         {
+          "title": "Counter",
+          "panels": [
+            {
+              "title": "Counts",
+              "type": "stat",
+              "targets": [
+                {
+                  "expr": "max(counter_counter{namespace=\"{{ .Release.Namespace }}\"})"
+                }
+              ]
+            },
+            {
+              "title": "Count increase 1m",
+              "type": "stat",
+              "targets": [
+                {
+                  "expr": "max(increase(counter_counter{namespace=\"{{ .Release.Namespace }}\"}[1m])) by (namespace)"
+                }
+              ]
+            },
+            {
+              "title": "Count increase 5m",
+              "type": "stat",
+              "targets": [
+                {
+                  "expr": "max(increase(counter_counter{namespace=\"{{ .Release.Namespace }}\"}[5m])) by (namespace)"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "Request Rate",
           "panels": [
             {
